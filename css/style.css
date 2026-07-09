@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+      -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    background-color: #191919;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+canvas {
+    max-width: 85%;
+    background-color: #111;
+    transition: ease-in-out 0.6s;
+    margin-bottom: 20px;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+.score--value{
+    font-weight: 700;
+    font-size: 4rem;
+    display: block;
+    margin-top: -10px;
+}
+
+.menu-screen{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: ease-in-out 0.5s;
+    z-index: 10;
+}
+.menu-screen.show{
+    opacity: 1;
+    transform: scale(1);
+}
+canvas.blur{
+    filter: blur(3px);
+}
+.game-over{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.final-score{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play{
+    border: none;
+    border-radius: 100px;
+    color: black;
+    padding: 10px 15px 10px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 40px;
+    font-weight: 600;
+    gap: 10px;
+    cursor: pointer;
+}
+.icon{
+    fill: #191919;
+    color: #191919;
+}
+.mobile-controllers{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.left-right{
+    display: flex;
+    align-items: center;
+    gap:70px;
+}
+.btn-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-position span {
+    color: #191919;
+    font-weight: 600;
+    font-size: 50px;
+}
+.up span {
+    transform: rotate(90deg);
+}
+.down span {
+    transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+    .mobile-controllers{
+        display: flex;
+    }
+}
