@@ -223,6 +223,8 @@ const checkCollision = () => {
         return index < neckIndex && position.x == head.x && head.y == position.y
     })
     if (wallCollision || selfCollision) {
+            snake = [initialPosition]
+            gameOn = true;
         gameOver()
     }
 }
@@ -239,13 +241,13 @@ const showAllScores = () => {
     }
 };
 const gameOver = () => {
-
+    death.play()
     direction = undefined
     gameOn = false
     menu.classList.add('show')
     finalScore.innerText = score.innerText
     canvas.classList.add('blur')
-
+    return;
 }
 
 const gameLoop = () => {
