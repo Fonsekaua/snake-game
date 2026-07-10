@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle" />
 </head>
+
 <body>
+    <button class="btn-view-score-total">
+        view scores
+    </button>
     <div class="score">score<span class="score--value">00</span></div>
     <div class="menu-screen">
         <span class="game-over">GAME-OVER</span>
         <span class="final-score">score <span class="final-score--value">00</span></span>
         <button class="btn-play">
             <span class="icon material-symbols-outlined">
-            play_circle
+                play_circle
             </span>
             Jogar novamente
         </button>
     </div>
+    <div class="score-total">
+        <h2>
+            🏆The Best Scores 🏆
+        </h2>
+        <ul class="score-total-data">
+
+
+        </ul>
+    </div>
     <canvas width="600" height="600"></canvas>
     <div class="mobile-controllers">
         <button class="btn-position up" data-position="up">
-            <span> < </span>
+            <span>
+                < </span>
         </button>
         <div class="left-right">
             <button class="btn-position left" data-position="left">
-                <span> < </span>
+                <span>
+                    < </span>
             </button>
             <button class="btn-position right" data-position="right">
                 <span> > </span>
             </button>
         </div>
-        <button class="btn-position down"  data-position="down">
-            <span> < </span>
+        <button class="btn-position down" data-position="down">
+            <span>
+                < </span>
         </button>
 
     </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
