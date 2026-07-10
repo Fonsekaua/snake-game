@@ -6,7 +6,7 @@ const btnPlay = document.querySelector(".btn-play");
 const h1 = document.querySelector("h1");
 const ctx = canvas.getContext("2d");
 
-const audio = new Audio('../assets/audio.mp3');
+const audio = new Audio('./assets/audio.mp3');
 
 const size = 30;
 let gameOn = true;
